@@ -15,14 +15,19 @@ using System.Windows.Shapes;
 
 namespace PermDynamics.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для Main.xaml
-    /// </summary>
     public partial class Main : Page
     {
         public Main()
         {
             InitializeComponent();
+        }
+
+        private void OpenPageChart(object sender, RoutedEventArgs e)
+        {
+            float value = Convert.ToInt32(tb_value.Text);
+
+            mainWindow.pointsInfo.Add(new Classes.PointInfo(value));
+            mainWindow.OpenPages(MainWindow.pages.chart);
         }
     }
 }
