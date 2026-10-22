@@ -26,8 +26,8 @@ namespace PermDynamics.Pages
         {
             float value = Convert.ToInt32(tb_value.Text);
 
-            mainWindow.pointsInfo.Add(new Classes.PointInfo(value));
-            mainWindow.OpenPages(MainWindow.pages.chart);
+            MainWindow.mainWindow.pointsInfo.Add(new Classes.PointInfo(value));
+            MainWindow.mainWindow.OpenPages(MainWindow.pages.chart);
         }
     }
 }
